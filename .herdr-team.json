@@ -1,0 +1,10 @@
+{
+  "worktreeDir": ".worktrees",
+  "prepare": [
+    { "copy": ".env" },
+    { "link": "node_modules" },
+    { "run": "npm install --prefer-offline", "cwd": "." }
+  ],
+  "verify": "node --version",
+  "test": "npm test"
+}
