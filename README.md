@@ -1,6 +1,6 @@
 # herdr-team-lead
 
-[herdr](https://herdr.dev) içinde çalışan bir Claude Code oturumunu **takım lideri**ne çeviren skill. Lead, işi işçi agent'lara (Claude veya Codex) böler, her birini kendi git worktree'sinde çalıştırır, sonuçları ayrı bir entegrasyon worktree'sinde birleştirir ve raporlar. Sen yalnızca iki yerde araya girersin: planı onaylarsın ve sonucu görürsün.
+herdr içinde çalışan bir Claude Code oturumunu **takım lideri**ne çeviren skill. Lead, işi işçi agent'lara (Claude veya Codex) böler, her birini kendi git worktree'sinde çalıştırır, sonuçları ayrı bir entegrasyon worktree'sinde birleştirir ve raporlar. Sen yalnızca iki yerde araya girersin: planı onaylarsın ve sonucu görürsün.
 
 ## İçindekiler
 
