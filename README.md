@@ -7,26 +7,30 @@ herdr içinde çalışan bir Claude Code oturumunu **takım lideri**ne çeviren 
 | Yol | Ne |
 | --- | --- |
 | `skill/herdr-team-lead/SKILL.md` | Lead'e akışı ve kuralları anlatan skill |
+| `src/`, `test/`, `package.json` | Skill'in kullandığı `team` komutu (`herdr-team` paketi, bağımlılıksız Node) |
 | `.herdr-team.json` | Projeye özel worktree ayarlarının genel bir örneği |
 
 ## Gereksinimler
 
 - herdr içinde çalışan oturum (`HERDR_ENV=1`)
-- PATH'te `team` komutu (`herdr-team` paketi)
 - Git ve Node.js 20+
 
-Bu repo yalnızca skill'i ve örnek config'i içerir; `team` komutu ayrı kurulur.
+`team` komutu bu repoda gelir; aşağıdaki kurulum onu PATH'e koyar.
 
 ## Kurulum
 
-Skill'i kullanıcı skill dizinine kopyala:
+Repoyu klonla, `team` komutunu kur ve skill'i yükle:
 
 ```sh
-mkdir -p ~/.claude/skills
-cp -r skill/herdr-team-lead ~/.claude/skills/
+git clone https://github.com/BeratDen/herdr-team-lead.git
+cd herdr-team-lead
+npm install -g .
+team skill install
 ```
 
-`team` komutu kuruluysa aynısını `team skill install` da yapar.
+`team skill install`, skill'i kullanıcı skill dizinine (`~/.claude/skills/herdr-team-lead`) kopyalar. İstersen elle de kopyalayabilirsin: `skill/herdr-team-lead` klasörünü `~/.claude/skills/` altına at.
+
+Testler: `npm test` (Node'un yerleşik test koşucusu).
 
 Sonra herdr içindeki bir Claude Code oturumunda lead'den bir takım yönetmesini iste. Skill kendiliğinden devreye girer.
 

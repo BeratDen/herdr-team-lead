@@ -1,0 +1,9 @@
+{
+  "name": "herdr-team",
+  "version": "0.1.0",
+  "description": "Team layer for herdr: isolated git worktrees for agents",
+  "type": "module",
+  "bin": { "team": "src/cli.js" },
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=20" }
+}
